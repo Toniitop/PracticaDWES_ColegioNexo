@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.google-blue{
+  background: #4285f4;
+}
+
+.shadow-text-black {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
