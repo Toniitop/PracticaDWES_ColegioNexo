@@ -12,7 +12,7 @@ async function Header() {
                 <div className="relative flex items-center justify-between h-16">
                     <div className="flex items-center flex-shrink-0">
                         <Link legacyBehavior href="/">
-                            <img className="w-auto h-8 lg:h-10 mr-4" src="/logo1.svg" alt="" srcSet="/logo1@2x.svg 2x, /logo1@3x.svg 3x" />
+                            <img className="w-auto h-8 lg:h-10 mx-2 md:mx-4" src="/logo1.svg" alt="" srcSet="/logo1@2x.svg 2x, /logo1@3x.svg 3x" />
                         </Link>
                         {session?.user?.role === 'ADMIN' && (
                             <Link legacyBehavior href="/admin">
