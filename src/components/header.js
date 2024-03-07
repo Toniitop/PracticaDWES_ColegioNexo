@@ -1,27 +1,28 @@
-import Link from 'next/link'
-import { auth } from "@/auth"
-import { logout } from '@/lib/actions'
+import Link from 'next/link';
+import { auth } from "@/auth";
+import { logout } from '@/lib/actions';
 
 async function Header() {
     const session = await auth();
-    // console.log(session);
 
     return (
         <nav className="bg-gray-800 border-b border-yellow-600">
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div className="relative flex items-center justify-between h-16">
-                    <div className="flex items-center flex-shrink-0">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
+                    <div className="flex items-center">
                         <Link legacyBehavior href="/">
-                            <img className="w-auto h-8 lg:h-10 mx-2 md:mx-4" src="/logo1.svg" alt="" srcSet="/logo1@2x.svg 2x, /logo1@3x.svg 3x" />
+                            <img className="w-auto h-8 lg:h-10" src="/logo1.svg" alt="Logo" />
                         </Link>
+                    </div>
+                    <div className="hidden md:flex items-center space-x-4">
                         {session?.user?.role === 'ADMIN' && (
                             <Link legacyBehavior href="/admin">
-                                <a className="ml-10 font-bold text-white hover:text-gray-300">Panel Administrador</a>
+                                <a className="font-bold text-white hover:text-gray-300">Panel Administrador</a>
                             </Link>
                         )}
                         {session && (
                             <Link legacyBehavior href="/dashboard">
-                                <a className="ml-10 font-bold text-white hover:text-gray-300">Panel de Usuario</a>
+                                <a className="font-bold text-white hover:text-gray-300">Panel de Usuario</a>
                             </Link>
                         )}
                     </div>
@@ -56,4 +57,4 @@ async function Header() {
     );
 }
 
-export default Header
+export default Header;

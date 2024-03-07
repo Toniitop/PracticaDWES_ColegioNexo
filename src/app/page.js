@@ -15,8 +15,7 @@ export default function Home() {
           <h1 className="text-white text-6xl font-bold mb-4 italic hover:text-orange-500 transition duration-300" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Bienvenido a Nexo
           </h1>
-          <br />
-          <p className="text-white text-xl mb-8">
+          <p className="bg-gray-300 rounded text-orange-500 text-xl mt-4 mb-8">
             Web para registrar personas de centros educativos y administrar la información correspondiente.
           </p>
           <Link href="/auth/login">

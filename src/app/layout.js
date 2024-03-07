@@ -15,6 +15,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body className={`${inter.className} bg-gray-200`} style={{ minHeight: '100vh' }}>
         <Header/>
         {children}
